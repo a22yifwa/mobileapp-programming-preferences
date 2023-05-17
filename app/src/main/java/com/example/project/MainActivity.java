@@ -9,17 +9,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+        Button button = findViewById(R.id.start_second_activity);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,SecondActivity.class);
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(intent);
 
             }
-
+        });
     }
+}
 
