@@ -14,10 +14,10 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/start_first_activity"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="1ND page" />
 
 
 </LinearLayout>
