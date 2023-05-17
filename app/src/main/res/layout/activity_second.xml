@@ -19,5 +19,11 @@
         android:layout_height="wrap_content"
         android:text="1ND page" />
 
-
+    <Button
+        android:id="@+id/prefButton"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingseditview"
+        android:onClick="savePref"
+        android:text="@string/save" />
 </LinearLayout>
