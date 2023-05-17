@@ -8,22 +8,28 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/myNewEdt"
-        android:hint="Write"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/settingseditview"/>
+    <Button
+    android:id="@+id/prefButton"
+    android:layout_width="78dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/settingseditview"
+    android:onClick="savePref"
+    android:text="@string/save" />
 
     <Button
         android:id="@+id/start_first_activity"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:text="1ND page" />
+        android:text="back" />
 
-    <Button
-        android:id="@+id/prefButton"
-        android:layout_width="78dp"
+
+
+    <TextView
+        android:layout_below="@+id/prefButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/settingseditview"
-        android:onClick="savePref"
-        android:text="@string/save" />
+        android:id="@+id/prefText"/>
 </LinearLayout>
