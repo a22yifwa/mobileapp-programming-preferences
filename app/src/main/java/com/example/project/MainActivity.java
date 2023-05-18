@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
         myPreferenceRef= getSharedPreferences("MyPreferenceName",MODE_PRIVATE);
         myPreferenceEditor= myPreferenceRef.edit();
 
-        myPreferenceRef = getPreferences(MODE_PRIVATE);
-        myPreferenceEditor = myPreferenceRef.edit();
-
-
+        // Read a preference
+        TextView prefTextRef=new TextView(this);
+        prefTextRef=(TextView)findViewById(R.id.prefText);
+        prefTextRef.setText(myPreferenceRef.getString("MyAppPreferenceString", "No preference found."));
 
         Button button = findViewById(R.id.start_second_activity);
         button.setOnClickListener(new View.OnClickListener() {
@@ -44,14 +44,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-        // Read a preference
-        TextView prefTextRef=new TextView(this);
-        prefTextRef=(TextView)findViewById(R.id.prefText);
-        prefTextRef.setText(myPreferenceRef.getString("MyAppPreferenceString", "No preference found."));
     }
-
-
 }
 
