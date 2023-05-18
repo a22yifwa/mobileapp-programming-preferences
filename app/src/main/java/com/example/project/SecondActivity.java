@@ -56,5 +56,4 @@ public class SecondActivity extends AppCompatActivity {
             newPrefText.setText("");
         }
 
-
 }

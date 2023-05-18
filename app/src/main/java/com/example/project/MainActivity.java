@@ -17,11 +17,12 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences myPreferenceRef;
     private SharedPreferences.Editor myPreferenceEditor;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button button = findViewById(R.id.start_second_activity);
 
         @SuppressLint({"MissingInflatedId","LocalSuppress"}) TextView textview=findViewById(R.id.prefText);
 
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         prefTextRef=(TextView)findViewById(R.id.prefText);
         prefTextRef.setText(myPreferenceRef.getString("MyAppPreferenceString", "No preference found."));
 
-        Button button = findViewById(R.id.start_second_activity);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
